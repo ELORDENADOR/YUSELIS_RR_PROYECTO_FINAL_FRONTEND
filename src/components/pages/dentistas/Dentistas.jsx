@@ -1,6 +1,8 @@
 import axios from 'axios'
 import React, { useContext, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { CartContextReducerDentistas } from '../../../context/CartContextReducerDentistas'
+
 
 const Dentistas = () => {
 
@@ -20,9 +22,12 @@ useEffect(() =>{
             {
                state.dentistas.map(item => (
                    <li key={item.id}>
-                       {item.name}
+                       {item.name}                      
                        <button onClick={()=>dispatch({type:"GUARDAR_DENTISTAS_FAVORITOS", payload: item})} >Agregar a favoritos</button>
+                       
+                       <Link to={`/dentista/${item.id}`}>
                        <button>Ver Detalle</button>
+                       </Link>
                    </li>
                ))
             }

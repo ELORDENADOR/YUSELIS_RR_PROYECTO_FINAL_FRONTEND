@@ -6,6 +6,7 @@ import DentistasFavoritos from './components/pages/dentistasFavoritos/DentistasF
 
 import Navbar from './components/layout/navbar/Navbar'
 import CartContextReducerDentistasProvaider from './context/CartContextReducerDentistas'
+import DentistaSeleccionado from './components/pages/dentistaSeleccionado/DentistaSeleccionado'
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
               <Route element={<Footer/>}>
                     <Route path="/" element={<h1>Home</h1>} />
                     <Route path="/dentistas" element={<Dentistas/>} />
-                    <Route path="/dentista/:id" element={<h1>dentista seleccionado</h1>} />
+                    <Route path="/dentista/:id" element={<DentistaSeleccionado/>} />
                     <Route path="/contacto" element={<h1>contacto</h1>} />
                     <Route path="/favotitos" element={<DentistasFavoritos/>} />
               </Route>

@@ -3,6 +3,8 @@ import React, { createContext, useReducer } from 'react'
 export const CartContextReducerDentistas = createContext()
 
 
+
+
 const initialState = {
     dentistas: [],
     isDark: false,
@@ -15,6 +17,8 @@ const reducerDentistas = (state,action) =>{
 switch (action.type){
     case "OBTENER_DENTISTAS":
         return {...state,dentistas: action.payload}
+    case "OBTENER_DENTISTA_SELECCIONADO":
+            return {...state,dentista: action.payload}
     case "CAMBIO_TEMA":
         return {...state,isDark: !state.isDark}
     case "GUARDAR_DENTISTAS_FAVORITOS":
