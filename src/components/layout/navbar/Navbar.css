@@ -1,18 +1,48 @@
 .activeNavbar{
-background-color: rgb(127, 180, 255);
+background-color: indianred;
+padding: 10px;
+margin: 10px;
 }
 
 .navbar{
-
+    padding: 10px;
+    margin: 10px;
 }
 
 
 .light{
-background-color:  #FDEDEC 
+background-color:  #FDEDEC;
+height: 100vh 
 }
 
 
 .dark{
 background-color:  lightpink ;
+height: 100vh 
 }
 
+
+#dentistas{
+    text-decoration: none;
+}
+
+
+#contacto{
+    text-decoration: none;
+}
+
+
+
+#favoritos{
+    text-decoration: none;
+}
+
+#botonTema{
+   padding: 5px;
+}
+
+#dentistasFavoritos{
+  
+padding-top: 50px;
+
+}

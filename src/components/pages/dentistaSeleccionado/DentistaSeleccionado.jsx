@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { useContext, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { CartContextReducerDentistas } from '../../../context/CartContextReducerDentistas'
-
+import "./DentistaSeleccionado.css";
 
 const DentistaSeleccionado = () => {
 
@@ -24,15 +24,55 @@ useEffect(() =>{
 
 
   return (
-    <div>
-        DentistaSeleccionado
+   <div>
+      DentistaSeleccionado
+    
+    <div id='contenedorDentistaSeleccionado'>
+   
                        
-      <h2> {state.dentista.name}</h2>
-      <h2> {state.dentista.email}</h2>
-      <h2> {state.dentista.phone}</h2>
-      <h2> {state.dentista.website}</h2>
+     {/* <p className='infoDentista'><strong  className='titulo' >Nombre:</strong><strong className='respuesta'>{state.dentista.name}</strong></p>
+     <p className='infoDentista' > <strong className='titulo'>Corre:</strong>:<strong className='respuesta'>{state.dentista.email}</strong></p>
+     <p className='infoDentista'><strong className='titulo'>Telefono: </strong><strong className='respuesta'>{state.dentista.phone}</strong></p>
+     <p className='infoDentista'> <strong className='titulo'>Pagina web:</strong> <strong className='respuesta'>{state.dentista.website}</strong></p> */}
+
+
+     <table>
+      <thead>
+           <tr>
+               <th>Nombre</th><th>Correo</th><th>Telefono</th><th>Pagina web</th>
+           </tr>
+      </thead>
+
+      <tbody>
+                         
+          <tr>                    
+
+                    <td>
+                     {state.dentista.name}
+                    </td>           
+                    <td>
+                    {state.dentista.email}
+                    </td>              
+                     <td>
+                     {state.dentista.phone}
+                    </td>
+                    <td>
+                      {state.dentista.website}
+                    </td>
+          </tr>
+           
+      </tbody>
+
+</table>
+  
+
+
+
+
+
 
 </div>
+   </div>
   )
 }
 
