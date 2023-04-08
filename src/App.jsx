@@ -1,7 +1,10 @@
 import { BrowserRouter, Routes ,Route} from 'react-router-dom'
 import './App.css'
+import Dentistas from './components/pages/dentistas/Dentistas'
+import DentistasFavoritos from './components/pages/dentistasFavoritos/DentistasFavoritos'
 import Footer from './components/pages/footer/Footer'
 import Navbar from './components/pages/navbar/Navbar'
+import CartContextReducerDentistasProvaider from './context/CartContextReducerDentistas'
 
 
 function App() {
@@ -9,18 +12,22 @@ function App() {
 
   return (
    <BrowserRouter>
+
+   <CartContextReducerDentistasProvaider>
      <Routes>
         <Route element={<Navbar/>}>
               <Route element={<Footer/>}>
                     <Route path="/" element={<h1>Home</h1>} />
-                    <Route path="/dentistas" element={<h1>Todos los Dentistas</h1>} />
+                    <Route path="/dentistas" element={<Dentistas/>} />
                     <Route path="/dentista/:id" element={<h1>dentista seleccionado</h1>} />
                     <Route path="/contacto" element={<h1>contacto</h1>} />
-                    <Route path="/favotitos" element={<h1>favoritos</h1>} />
+                    <Route path="/favotitos" element={<DentistasFavoritos/>} />
               </Route>
         </Route>
         <Route path="*" element={<h1>No existe la pagina</h1>} />
      </Routes>
+   </CartContextReducerDentistasProvaider>
+     
        
    </BrowserRouter>
   )
