@@ -21,7 +21,8 @@ useEffect(() =>{
                state.dentistas.map(item => (
                    <li key={item.id}>
                        {item.name}
-                       <button onClick={()=>dispatch({type:"GUARDAR_DENTISTAS_FAVORITOS", payload: item})} >Favoritos</button>
+                       <button onClick={()=>dispatch({type:"GUARDAR_DENTISTAS_FAVORITOS", payload: item})} >Agregar a favoritos</button>
+                       <button>Ver Detalle</button>
                    </li>
                ))
             }

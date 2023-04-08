@@ -1,9 +1,10 @@
 import { BrowserRouter, Routes ,Route} from 'react-router-dom'
 import './App.css'
+import Footer from './components/layout/footer/Footer'
 import Dentistas from './components/pages/dentistas/Dentistas'
 import DentistasFavoritos from './components/pages/dentistasFavoritos/DentistasFavoritos'
-import Footer from './components/pages/footer/Footer'
-import Navbar from './components/pages/navbar/Navbar'
+
+import Navbar from './components/layout/navbar/Navbar'
 import CartContextReducerDentistasProvaider from './context/CartContextReducerDentistas'
 
 

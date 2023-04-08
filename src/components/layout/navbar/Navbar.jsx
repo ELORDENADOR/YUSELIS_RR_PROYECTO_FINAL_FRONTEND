@@ -7,7 +7,7 @@ const Navbar = () => {
   const { state, dispatch } = useContext(CartContextReducerDentistas);
 
   return (
-    <div>
+    <div  className={state.isDark ? "dark" : "light"}>
       <br />
       <NavLink
         to="/dentistas"

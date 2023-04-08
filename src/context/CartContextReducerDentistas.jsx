@@ -6,7 +6,8 @@ export const CartContextReducerDentistas = createContext()
 const initialState = {
     dentistas: [],
     isDark: false,
-    dentistasFavoritos: []
+    dentistasFavoritos: [],
+    dentista: {}
     // favs: localStorage.getItem("favoritos")
 }
 
