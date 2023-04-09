@@ -7,6 +7,7 @@ import Navbar from './components/layout/navbar/Navbar'
 import CartContextReducerDentistasProvaider from './context/CartContextReducerDentistas'
 import DentistaSeleccionado from './components/pages/dentistaSeleccionado/DentistaSeleccionado'
 import Contacto from './components/pages/contacto/Contacto'
+import Home from './components/pages/home/Home'
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
      <Routes>
         <Route element={<Navbar/>}>
           
-                    <Route path="/" element={<h1>Home</h1>} />
+                    <Route path="/" element={<Home/>} />
 
                     <Route path="/dentistas" element={<Dentistas/>} />
                     
