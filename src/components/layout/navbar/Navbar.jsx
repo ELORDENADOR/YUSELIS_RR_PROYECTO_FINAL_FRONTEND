@@ -32,7 +32,7 @@ const Navbar = () => {
 
        
        <div  id="dentistasFavoritos">
-          Dentistas Favoritos: {state.dentistasFavoritos.length}
+          Dentistas Favoritos: <strong id="cantidadDeFavoritos">{state.dentistasFavoritos.length}</strong>
        </div>
 
       <Outlet />

@@ -46,3 +46,10 @@ height: 100vh
 padding-top: 50px;
 
 }
+
+#cantidadDeFavoritos{
+    background-color:crimson;
+    padding: 5px;
+    color: white;
+    border-radius: 20px;
+}

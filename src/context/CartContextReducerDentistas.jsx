@@ -9,8 +9,8 @@ const initialState = {
     dentistas: [],
     isDark: false,
     dentistasFavoritos: [],
-    dentista: {}
-    // favs: localStorage.getItem("favoritos")
+    dentista: {},
+    favs:  JSON.parse(localStorage.getItem("favoritos")) || [],
 }
 
 const reducerDentistas = (state,action) =>{
@@ -22,6 +22,9 @@ switch (action.type){
     case "CAMBIO_TEMA":
         return {...state,isDark: !state.isDark}
     case "GUARDAR_DENTISTAS_FAVORITOS":
+        
+        let storage = localStorage.setItem("favorito", JSON.stringify[state.dentistasFavoritos ] )
+
         let existe = state.dentistasFavoritos.some((elemento) => elemento.id === action.payload.id)
         if(existe){                       
             let nuevoArregloDentistasFavoritos = state.dentistasFavoritos.map((item) =>{

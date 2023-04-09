@@ -72,7 +72,7 @@ if(validarEmail_2){
 
 }
 
-console.log(usuarios)
+
 
   return (
     <div id='contenedorFormulario'>

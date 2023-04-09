@@ -99,6 +99,13 @@ strong{
 
 
 
+ #tituloDentistaSeleccionado{
+    padding: 10px;
+    margin-top: 20px;
+}
 
 
-
+#configuracionImgDoctor{
+    width: 80px;
+    height: 80px;
+}
